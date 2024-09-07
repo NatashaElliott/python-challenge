@@ -14,7 +14,7 @@ def budgetanalysis():
     # Opening the CSV file and creating a dictionary
     with open(budget_data) as csvfile:
         csvreader = csv.reader(csvfile, delimiter=",")
-        # Skipping header rows
+        # Skipping/storing header rows
         next(csvreader, None)
         for rows in csvreader:
             months[rows[0]] = int(rows[1])

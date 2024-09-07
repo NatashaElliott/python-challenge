@@ -13,7 +13,7 @@ def electionanalysis():
     # Opening the CSV file and creating a dictionary
     with open(election_data) as csvfile:
         csvreader = csv.reader(csvfile, delimiter=",")
-        # Skipping header rows
+        # Skipping/storing header rows
         next(csvreader, None)
         for rows in csvreader:
             # Create dictionary of candidates and their total votes
@@ -47,4 +47,5 @@ def electionanalysis():
         datafile.write("----------------------------\n\n")
     
     return
+    
 electionanalysis()
